@@ -15,24 +15,58 @@ export default {
   getRoutes: async () => {
     const { posts } = await jdown('content')
     return [
-      {
-        path: '/',
-        component: 'src/pages/home',
-        getData: () => ({
-          posts,
-        }),
-        children: posts.map(post => ({
-          path: `/post/${post.slug}`,
-          component: 'src/containers/post',
+      ...makePageRoutes({
+        items: posts,
+        pageSize: 5,
+        pageToken: 'page',
+        route: {
+          path: '/',
+          component: 'src/pages/home'
+        },
+        decorate: items => ({
           getData: () => ({
-            post,
-          }),
-        })),
-      },
+            posts: items
+          })
+        })
+      }),
       {
         is404: true,
         component: 'src/pages/404',
       },
     ]
   },
+}
+
+function makePageRoutes({
+  items,
+  pageSize,
+  pageToken = 'page',
+  route,
+  decorate
+}) {
+  const itemsCopy = [...items].reverse() // Make a copy of the items
+  const pages = [] // Make an array for all of the different pages
+
+  while (itemsCopy.length) {
+    // Splice out all of the items into separate pages using a set pageSize
+    pages.push(itemsCopy.splice(0, pageSize))
+  }
+
+  // Move the first page out of pagination. This is so page one doesn't require a page number.
+  const firstPage = pages.shift()
+
+  const routes = [
+    {
+      ...route,
+      ...decorate(firstPage) // and only pass the first page as data
+    },
+    // map over each page to create an array of page routes, and spread it!
+    ...pages.map((page, i) => ({
+      ...route, // route defaults
+      path: `${route.path}/${pageToken}/${i + 2}`,
+      ...decorate(page)
+    }))
+  ]
+
+  return routes
 }

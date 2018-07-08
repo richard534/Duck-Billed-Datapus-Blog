@@ -17,13 +17,9 @@ const Home = ({ posts }) => (
       </div>
     </div>
 
-    <ul>
-      {posts.slice(-2).map(post => (
-        <Post key={post.slug} post={post}/>
-      ))}
-    </ul>
-
-
+    {posts.map(post => (
+      <Post key={post.slug} post={post}/>
+    ))}
 
     <div className="navigation-links">
       <p>Index</p>
