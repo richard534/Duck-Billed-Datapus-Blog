@@ -1,33 +1,349 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
 body {
-  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', Helvetica, Arial,
-    'Lucida Grande', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
+	line-height: 1;
+	color: black;
+	background: white;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
 }
 
-a {
-  text-decoration: none;
-  color: #108db8;
-  font-weight: bold;
+/* ################################################ */
+
+/* Extra-Small (Phone-Portrait) <576px */
+
+html {
+  font-family: 'Open Sans', sans-serif;
 }
 
 img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.img-fluid {
   max-width: 100%;
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-nav {
-  width: 100%;
-  background: #108db8;
+.grid-container {
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-auto-flow: column;
 }
 
-nav a {
-  color: white;
-  padding: 1rem;
-  display: inline-block;
+.grid-container > .navbar-background {
+  grid-column: 1/6;
+  background-color: #f0f2ef;
+  display: flex;
+  justify-content: flex-end;
 }
 
-.content {
-  padding: 1rem;
+.navbar {
+  justify-self: flex-end;
+  padding-right: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.navbar > img {
+  max-width: 6em;
+}
+
+.header-background {
+  grid-column: 6/13;
+  background-color: #f0f2ef;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header > header {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+  font-size: 20px;
+  padding-right: 2em;
+}
+
+.header > p {
+  font-weight: 100;
+  font-size: 12px;
+  justify-self: start;
+  padding-left: 0.2em;
+  padding-top: 0.4em;
+  height: 50%;
+}
+
+.grid-main {
+  grid-column: 1 / 13;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-top: 0.5em;
+  grid-gap: 3em;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.blog-post {
+  font-weight: 400; /* Regular */
+}
+
+.blog-post > .date-stamp {
+  font-weight: 100; /* Thin */
+  font-size: 12px;
+  padding-bottom: 0.6em;
+}
+
+.blog-post > header {
+  font-weight: 700; /* Bold */
+  font-size: 20px;
+  line-height: 24px;
+  padding-bottom: 0.8em;
+}
+
+.blog-post > article {
+  font-size: 14px;
+}
+
+.blog-post > .comments {
+  font-size: 14px;
+  color: #2b6dad;
+  padding-top: 2em;
+}
+
+.pagination {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 1em;
+  font-weight: 100; /* Thin */
+  font-size: 12px;
+  padding-bottom: 1.5em;
+}
+
+.page-num {
+  grid-column: 2/3;
+  justify-self: center;
+}
+
+.older-posts {
+  justify-self: right;
+}
+
+.grid-container > .navigation-links {
+  grid-column: 1/13;
+  background-color: #f0f2ef;
+  text-align: center;
+  padding-bottom: 1.5em;
+  font-weight: 700; /* Bold */
+  font-size: 14px;
+}
+
+.navigation-links > p {
+  padding-top: 1.5em;
+}
+
+/* Small (Phone-Landscape) >=576px */
+@media (min-width: 576px) {
+  .grid-main {
+    max-width: 540px;
+  }
+
+  .grid-container > .navbar-background {
+    grid-column: 1/5;
+    background-color: #f0f2ef;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar > img {
+    max-width: 8em;
+  }
+
+  .header-background {
+    grid-column: 5/13;
+    background-color: #f0f2ef;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header > header {
+    font-size: 30px;
+  }
+
+  .blog-post > .date-stamp {
+    font-size: 15px;
+  }
+
+  .blog-post > header {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .blog-post > article {
+    font-size: 17px;
+  }
+
+  .blog-post > .comments {
+    font-size: 17px;
+  }
+
+  .pagination {
+    font-size: 16px;
+    padding-bottom: 2em;
+  }
+
+  footer {
+    font-size: 17px;
+  }
+}
+
+/* Medium (Tablet) >=768px */
+@media (min-width: 768px) {
+  .grid-main {
+    max-width: 720px;
+  }
+
+  .grid-container > .navbar-background {
+    grid-column: 1/4;
+    background-color: #f0f2ef;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .navbar > img {
+    max-width: 8em;
+  }
+
+  .header-background {
+    grid-column: 4/13;
+    background-color: #f0f2ef;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .header > header {
+    font-size: 36px;
+  }
+}
+
+/* Large (Desktop) >=992px */
+@media (min-width: 992px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 0.25fr 0.55fr;
+    grid-column-gap: 2em;
+    grid-auto-flow: column;
+  }
+
+  .grid-container > .header-background {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 56px;
+  }
+
+  .header > header {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 100;
+    font-size: 55px;
+    padding-right: 0;
+  }
+
+  .header > p {
+    font-size: 19px;
+  }
+
+  .grid-container > .navbar-background {
+    grid-column: 1/2;
+    background-color: #f0f2ef;
+    justify-content: center;
+  }
+
+  .navbar {
+    padding-right: 0;
+    padding-top: 2.5em;
+    padding-bottom: 0;
+  }
+
+  .navbar > img {
+    max-width: 15em;
+  }
+
+  .grid-main {
+    grid-column: 2/3;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+    margin-left: 0;
+    max-width: 960px;
+  }
+
+  .blog-post > .date-stamp {
+    font-size: 18px;
+  }
+
+  .blog-post > header {
+    font-size: 40px;
+  }
+
+  .blog-post > article {
+    font-size: 21px;
+  }
+
+  .grid-container > .navigation-links {
+    grid-column: 1/2;
+    font-size: 21px;
+    padding-top: 0.5em;
+  }
+}
+
+/* X-Large (Widescreen Desktop) >=1200px */
+@media (min-width: 1200px) {
+  .grid-main {
+    max-width: 1140px;
+  }
 }
