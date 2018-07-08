@@ -1,3 +1,4 @@
+import React, { Component } from 'react'
 import { reloadRoutes } from 'react-static/node'
 import chokidar from 'chokidar'
 import jdown from 'jdown'
@@ -5,6 +6,22 @@ import jdown from 'jdown'
 chokidar.watch('content').on('all', () => reloadRoutes())
 
 export default {
+  Document: class CustomHtml extends Component {
+    render () {
+      const { Html, Head, Body, children } = this.props
+      return (
+        <Html>
+          <Head>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+          </Head>
+          <Body>
+            {children}
+          </Body>
+        </Html>
+      )
+    }
+  },
   devServer: {
     host: '0.0.0.0',
     port: 8080

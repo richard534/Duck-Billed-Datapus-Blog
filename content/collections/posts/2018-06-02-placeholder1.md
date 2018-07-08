@@ -1,7 +1,7 @@
 ---
 title: Placeholder2
 description: Bloggy blog post
-slug: place-holder
+slug: place-holder-slug-2
 ---
 
 # PlaceHolder

@@ -1,6 +1,6 @@
-import React from 'react'
-import { withRouteData, Link } from 'react-static'
-import Post from '../containers/post'
+import React from "react";
+import { withRouteData, Link } from "react-static";
+import Post from "../containers/post";
 
 const Home = ({ posts }) => (
   <div className="grid-container">
@@ -17,9 +17,7 @@ const Home = ({ posts }) => (
       </div>
     </div>
 
-    {posts.map(post => (
-      <Post key={post.slug} post={post}/>
-    ))}
+    {posts.map(post => <Post key={post.slug} post={post} />)}
 
     <div className="navigation-links">
       <p>Index</p>
@@ -28,4 +26,4 @@ const Home = ({ posts }) => (
   </div>
 )
 
-export default withRouteData(Home)
+export default withRouteData(Home);

@@ -58,13 +58,6 @@ img {
   border-style: none;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
 .grid-container {
   max-width: 100%;
   display: grid;
@@ -122,7 +115,7 @@ img {
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 0.5em;
-  grid-gap: 3em;
+  grid-gap: 1em;
   margin-right: auto;
   margin-left: auto;
 }
@@ -137,27 +130,76 @@ img {
   padding-bottom: 0.6em;
 }
 
-.blog-post > header {
-  font-weight: 700; /* Bold */
+.blog-post > .blog-content > h1 {
+  font-weight: 700;
   font-size: 20px;
-  line-height: 24px;
-  padding-bottom: 0.8em;
 }
 
-.blog-post > p {
-  font-size: 14px;
+.blog-post > .blog-content > h2 {
+  font-weight: 700;
+  font-size: 18px;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
 }
 
-.blog-content > ul {
+.blog-post > .blog-content > h3 {
+  font-weight: 700;
+  font-size: 16px;
+  padding-top: 1em;
+  padding-bottom: 0.5em;
+}
+
+.blog-post > .blog-content > p {
+  font-size: 16px;
+  line-height: 1.5em;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+
+.blog-post > .blog-content blockquote {
+  font-size: 16px;
+  line-height: 1.5em;
+  padding-left: 1em;
+  border-left: #f0f2ef solid thick;
+}
+
+.blog-post > .blog-content strong {
+  font-weight: 700;
+}
+
+.blog-post > .blog-content > ul {
   list-style-type: disc;
   list-style-position: outside;
-  margin-left: 1em;
+  margin-left: 0.8em;
+  padding-left: 0.8em;
+  padding-bottom: 1em;
 }
 
-.blog-post > .comments {
+.blog-post > .blog-content > ul > li {
+  padding-top: 0.5em;
+  font-size: 16px;
+  line-height: 1.5em;
+}
+
+.blog-post > .blog-content > p > img {
+  max-width: 100%;
+  height: auto;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.blog-post > .blog-content em {
+  display: flex;
+  justify-content: center;
+  font-weight: 100;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.grid-main > .comments {
   font-size: 14px;
   color: #2b6dad;
-  padding-top: 2em;
+  padding-bottom: 3em;
 }
 
 .pagination {
@@ -223,16 +265,16 @@ img {
     font-size: 15px;
   }
 
-  .blog-post > header {
+  .blog-post > .blog-content > h1 {
     font-size: 30px;
-    line-height: 36px;
+    /* line-height: 36px; */
   }
 
-  .blog-post > p {
+  .blog-post > .blog-content > p {
     font-size: 17px;
   }
 
-  .blog-post > .comments {
+  .grid-main > .comments {
     font-size: 17px;
   }
 
@@ -332,23 +374,19 @@ img {
     font-size: 18px;
   }
 
-  .blog-post > header {
+  .blog-post > .blog-content > h1 {
     font-size: 40px;
   }
+  
+  .blog-post > .blog-content > h2 {
+    font-size: 34px;
+  }
 
-  .blog-post > p {
+  .blog-post > .blog-content > p {
     font-size: 21px;
   }
-  
-  .blog-content > p {
-    font-size: 21px;
-  }
-  
+
   .blog-content > ul {
-    list-style-type: disc;
-    list-style-position: outside;
-    margin-left: 1em;
-    padding-left: 1em;
     font-size: 21px;
   }
 

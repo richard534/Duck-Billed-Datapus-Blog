@@ -1,7 +1,7 @@
 ---
 title: Placeholder6
 description: Bloggy blog post
-slug: place-holder
+slug: place-holder-slug-6
 date: 18 Dec 2018
 ---
 
