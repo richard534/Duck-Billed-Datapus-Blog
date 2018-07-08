@@ -1,6 +1,8 @@
 ---
 title: Getting started with Data Engineering
 description: Bloggy blog post
+slug: getting-started-with-data-engineering
+date: 31 Dec 2018
 ---
 
 # Getting started with Data Engineering

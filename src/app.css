@@ -144,8 +144,14 @@ img {
   padding-bottom: 0.8em;
 }
 
-.blog-post > article {
+.blog-post > p {
   font-size: 14px;
+}
+
+.blog-content > ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  margin-left: 1em;
 }
 
 .blog-post > .comments {
@@ -222,7 +228,7 @@ img {
     line-height: 36px;
   }
 
-  .blog-post > article {
+  .blog-post > p {
     font-size: 17px;
   }
 
@@ -330,7 +336,19 @@ img {
     font-size: 40px;
   }
 
-  .blog-post > article {
+  .blog-post > p {
+    font-size: 21px;
+  }
+  
+  .blog-content > p {
+    font-size: 21px;
+  }
+  
+  .blog-content > ul {
+    list-style-type: disc;
+    list-style-position: outside;
+    margin-left: 1em;
+    padding-left: 1em;
     font-size: 21px;
   }
 

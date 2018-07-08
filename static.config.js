@@ -1,25 +1,29 @@
-import axios from 'axios'
+import { reloadRoutes } from 'react-static/node'
+import chokidar from 'chokidar'
+import jdown from 'jdown'
+
+chokidar.watch('content').on('all', () => reloadRoutes())
 
 export default {
+  devServer: {
+    host: '0.0.0.0',
+    port: 8080
+  },
   getSiteData: () => ({
-    siteTitle: 'React Static',
+    siteTitle: 'Duck Billed Datapus',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    const { posts } = await jdown('content')
     return [
       {
         path: '/',
-        component: 'src/components/home/home',
-      },
-      {
-        path: '/blog',
-        component: 'src/components/blog/blog',
+        component: 'src/pages/home',
         getData: () => ({
           posts,
         }),
         children: posts.map(post => ({
-          path: `/post/${post.id}`,
-          component: 'src/components/blog/post',
+          path: `/post/${post.slug}`,
+          component: 'src/containers/post',
           getData: () => ({
             post,
           }),
@@ -27,7 +31,7 @@ export default {
       },
       {
         is404: true,
-        component: 'src/components/404',
+        component: 'src/pages/404',
       },
     ]
   },
