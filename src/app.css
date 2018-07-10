@@ -132,20 +132,20 @@ img {
 
 .blog-post > .blog-content > h1 {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 28px;
   padding-bottom: 0.25em;
 }
 
 .blog-post > .blog-content > h2 {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 22px;
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
 
 .blog-post > .blog-content > h3 {
   font-weight: 700;
-  font-size: 16px;
+  font-size: 20px;
   padding-top: 1em;
   padding-bottom: 0.5em;
 }
@@ -273,7 +273,6 @@ img {
 
   .blog-post > .blog-content > h1 {
     font-size: 30px;
-    /* line-height: 36px; */
   }
 
   .blog-post > .blog-content > p {
