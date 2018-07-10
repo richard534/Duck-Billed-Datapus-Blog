@@ -5,7 +5,7 @@ slug: getting-started-with-data-engineering
 date: 31 Dec 2018
 ---
 
-# Getting started with Data Engineering
+# Getting Started With Data Engineering
 
 I recently moved to a team that specialises in data and analytics with little to no knowledge of the area. I spent a lot of time upskilling before I became productive whatsoever. This post is the overview I wish I had.
 
@@ -28,7 +28,7 @@ You can only get so far throwing more powerful hardware (CPU’s/RAM) into a sin
 ## What is a Data Engineer 💻
 
 We can distinguish data engineers from software developers/engineers In the same way we distinguish web/android developers from software developers. All have knowledge of building software; some just have more specialised knowledge of a specific technology/stack.
-> **N.B.** A similar distinction is being made on the operations side of things as well. With job titles such as “*data infrastructure engineer” cropping up.
+> **N.B.** A similar distinction is being made on the operations side of things as well. With job titles such as “data infrastructure engineer” cropping up.
 
 It’s worth taking a second to differentiate between two often confused roles in the big data space. That of a “Data engineer” and a “Data Scientist”.
 
@@ -238,6 +238,8 @@ I’m including a terminology guide in this post. It is something I believe woul
 I hope this has proved to be an insightful introduction to data engineering. I apologise if it felt like a Hadoop guide at times, love it or hate it Hadoop can be difficult to avoid :).
 
 As always feedback — both good and bad — is always appreciated!
+
+---
 
 ## External Links/Inspired by/Further Reading 😲
 

@@ -133,6 +133,7 @@ img {
 .blog-post > .blog-content > h1 {
   font-weight: 700;
   font-size: 20px;
+  padding-bottom: 0.25em;
 }
 
 .blog-post > .blog-content > h2 {
@@ -161,6 +162,9 @@ img {
   line-height: 1.5em;
   padding-left: 1em;
   border-left: #f0f2ef solid thick;
+  border-top: #f0f2ef solid none;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .blog-post > .blog-content strong {
@@ -190,6 +194,8 @@ img {
 
 .blog-post > .blog-content em {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   font-weight: 100;
   text-align: center;
