@@ -17,7 +17,9 @@ const Home = ({ posts }) => (
       </div>
     </div>
 
-    {posts.map(post => <Post key={post.slug} post={post} />)}
+    <div className="grid-main">
+      {posts.map(post => <Post key={post.slug} post={post} />)}
+    </div>
 
     <div className="navigation-links">
       <p>Index</p>

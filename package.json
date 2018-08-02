@@ -10,9 +10,7 @@
     "serve": "serve dist -p 3000"
   },
   "dependencies": {
-    "axios": "^0.16.2",
     "chokidar": "^2.0.4",
-    "htmr": "^0.7.0",
     "jdown": "^0.6.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",

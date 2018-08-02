@@ -1,6 +1,6 @@
 ---
 title: Getting started with Data Engineering
-description: Bloggy blog post
+description: Big picture overview of the data engineering specialisation.
 slug: getting-started-with-data-engineering
 date: 31 Dec 2018
 ---
