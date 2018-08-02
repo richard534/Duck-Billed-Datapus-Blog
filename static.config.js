@@ -2,26 +2,34 @@ import React, { Component } from 'react'
 import { reloadRoutes } from 'react-static/node'
 import chokidar from 'chokidar'
 import jdown from 'jdown'
+import { Renderer } from 'marked';
+import highlightjs from 'highlight.js';
 
 chokidar.watch('content').on('all', () => reloadRoutes())
 
+// Custom marked renderer.
+const renderer = new Renderer();
+renderer.code = (code, language) => {
+  // Check whether the given language is valid for highlight.js.
+  const validLang = !!(language && highlightjs.getLanguage(language));
+  // Highlight only if the language is valid.
+  const highlighted = validLang ? highlightjs.highlight(language, code).value : code;
+  // Render the highlighted code with `hljs` class.
+  return `<pre><code class="hljs ${language}">${highlighted}</code></pre>`;
+};
+
 export default {
-  Document: class CustomHtml extends Component {
-    render () {
-      const { Html, Head, Body, children } = this.props
-      return (
-        <Html>
-          <Head>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-          </Head>
-          <Body>
-            {children}
-          </Body>
-        </Html>
-      )
-    }
-  },
+  Document: ({ Html, Head, Body, children }) => (
+    <Html>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+      </Head>
+      <Body>
+        {children}
+      </Body>
+    </Html>
+  ),
   devServer: {
     host: '0.0.0.0',
     port: 8080
@@ -30,7 +38,7 @@ export default {
     siteTitle: 'Duck Billed Datapus',
   }),
   getRoutes: async () => {
-    const { posts } = await jdown('content')
+    const { posts } = await jdown('content', { renderer })
     return [
       ...makePageRoutes({
         items: posts,

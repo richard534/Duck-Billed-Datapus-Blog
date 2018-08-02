@@ -452,6 +452,11 @@ img {
   .blog-post > .blog-content blockquote {
     font-size: 21px;
   }
+  
+  .blog-post > .blog-content .hljs {
+    font-size: 18px;
+    line-height: 1.2em;
+  }
 }
 
 /* X-Large (Widescreen Desktop) >=1200px */

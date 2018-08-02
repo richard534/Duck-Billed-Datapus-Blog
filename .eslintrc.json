@@ -29,7 +29,8 @@
     "no-alert": 0,
     "no-lone-blocks": 0,
     "no-console": 0,
-    "import/no-unresolved": 0
+    "import/no-unresolved": 0,
+    "react/display-name": 0
   },
   "settings": {
     "import/resolver": {

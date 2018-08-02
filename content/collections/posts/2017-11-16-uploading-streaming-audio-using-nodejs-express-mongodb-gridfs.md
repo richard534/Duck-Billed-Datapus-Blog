@@ -66,14 +66,10 @@ const ObjectID = require('mongodb').ObjectID;
 const { Readable } = require('stream');
 ```
 
-
-<!-- <iframe src="https://gist.github.com/richard534/5632e35fcfdd88c18fa4acaa34e29467#file-streams1-js" frameborder=0></iframe> -->
-
 You’ll first want to declare your module dependencies. I’ve split these into both npm modules and nodejs modules for readability.
 
 ### Initialize Express, Express Router and MongoDB
 
-<iframe src="https://medium.com/media/d7e28d9b5be5a35584d73f8e57798c1b" frameborder=0></iframe>
 
 Next we will initialize the express application. Then we will call app.use('/tracks', trackRoute) to bind the trackRoute router to the /tracks URL.
 
@@ -83,7 +79,6 @@ After that we use the [MongoClient AP](https://mongodb.github.io/node-mongodb-na
 
 ### Declaring GET track stream route
 
-<iframe src="https://medium.com/media/d1c7ed0a6e70523f0014970dcdf2b07f" frameborder=0></iframe>
 
 The next step is to declare the REST route that will handle getting the track stream from our web service.
 
@@ -119,7 +114,6 @@ For completeness I also wrote a listener function for the error event. For the s
 
 ### Declaring POST track route
 
-<iframe src="https://medium.com/media/52ad51c415ffc8d62417e5bdfa0e5add" frameborder=0></iframe>
 
 Finally its time to declare the REST route that will handle posting a track to our web service.
 
