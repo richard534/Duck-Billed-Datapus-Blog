@@ -159,7 +159,7 @@ We should receive a 201 response from the service and a message confirming the u
 
 ### GET track route
 
-We can test the GET track endpoint using the following URL localhost:3005/tracks/5a04a2ec95a1ac09f6d2d59e (the url parameter being the object ID we received from the previous POST request). Set the type of the request to GET and send away!
+We can test the GET track endpoint using the following URL `localhost:3005/tracks/5a04a2ec95a1ac09f6d2d59e` (the url parameter being the object ID we received from the previous POST request). Set the type of the request to GET and send away!
 
 ![Manually testing POST track endpoint](https://cdn-images-1.medium.com/max/4880/1*w3N_-2mpvAboGAQ8tbrRgw.png)*Manually testing POST track endpoint*
 

@@ -7,7 +7,7 @@ import highlightjs from 'highlight.js';
 
 chokidar.watch('content').on('all', () => reloadRoutes())
 
-// Custom marked renderer.
+// Custom marked renderers.
 const renderer = new Renderer();
 renderer.code = (code, language) => {
   // Check whether the given language is valid for highlight.js.
@@ -16,6 +16,10 @@ renderer.code = (code, language) => {
   const highlighted = validLang ? highlightjs.highlight(language, code).value : code;
   // Render the highlighted code with `hljs` class.
   return `<pre><code class="hljs ${language}">${highlighted}</code></pre>`;
+};
+
+renderer.codespan = (code) => {
+  return `<code class="hljs">${code}</code>`;
 };
 
 export default {
