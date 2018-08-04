@@ -2,6 +2,7 @@
 title: Placeholder4
 description: Bloggy blog post
 slug: place-holder-slug-4
+date: 08 Nov 2017
 ---
 
 # PlaceHolder

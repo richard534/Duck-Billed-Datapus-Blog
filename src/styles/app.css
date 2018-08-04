@@ -173,6 +173,7 @@ img {
   border-top: #f0f2ef solid none;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  word-wrap: break-word;
 }
 
 .blog-post > .blog-content strong {
@@ -214,6 +215,8 @@ img {
 .grid-main > .blog-post > .comments {
   font-size: 14px;
   color: #2b6dad;
+  padding-top: 1.5em;
+  padding-bottom: 2em;
 }
 
 /* TODO add pagination stying */
@@ -239,6 +242,7 @@ img {
   grid-column: 1/13;
   background-color: #f0f2ef;
   text-align: center;
+  margin-top: 2em;
   padding-bottom: 1.5em;
   font-weight: 700; /* Bold */
   font-size: 14px;
@@ -313,8 +317,8 @@ img {
 
   .grid-main > .blog-post > .comments {
     font-size: 21px;
-    padding-top: 2.5em;
-    /* padding-bottom: 3.5em; */
+    padding-top: 1em;
+    padding-bottom: 1.5em;
   }
 
   /* TODO add pagination styling  */
@@ -335,13 +339,8 @@ img {
     background-color: #f0f2ef;
   }
   
-  .navigation-links {
-    height: 100%;
-    grid-row: 1fr 1fr;
-  }
-  
   .navigation-links > p {
-      font-size: 20px;
+    line-height: 1.5em;
   }
 
   .navbar > img {
@@ -365,6 +364,10 @@ img {
   
   .blog-post > .blog-content > h1 {
     padding-bottom: 0.6em;
+  }
+
+  .grid-main > .blog-post > .comments {
+    padding-top: 2.5em;
   }
 }
 
@@ -416,6 +419,7 @@ img {
     font-size: 21px;
     padding-top: 0.5em;
     padding-bottom: 0px;
+    margin-top: 0px;
   }
 
   .grid-main {
@@ -425,6 +429,7 @@ img {
     padding-left: 0;
     margin-left: 0;
     max-width: 700px;
+    margin-bottom: 5em;
   }
 
   .blog-post > .date-stamp {
