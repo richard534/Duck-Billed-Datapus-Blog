@@ -121,7 +121,9 @@ img {
 }
 
 .blog-post {
-  font-weight: 400; /* Regular */
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  overflow: hidden;
 }
 
 .blog-post > .date-stamp {
@@ -467,9 +469,8 @@ img {
   }
   
   .grid-main {
-    max-width: 900px;
+    max-width: 700px;
   }
-  
   
   .navbar > img {
     max-width: 15em;
