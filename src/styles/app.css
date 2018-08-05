@@ -53,6 +53,11 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 img {
   vertical-align: middle;
   border-style: none;
@@ -132,7 +137,7 @@ img {
   padding-bottom: 0.6em;
 }
 
-.blog-post > .blog-content > h1 {
+.blog-post h1 {
   font-weight: 700;
   font-size: 28px;
   padding-bottom: 0.25em;
@@ -212,7 +217,7 @@ img {
   vertical-align: middle;
 }
 
-.grid-main > .blog-post > .comments {
+.grid-main > .blog-post .comments {
   font-size: 14px;
   color: #2b6dad;
   padding-top: 1.5em;
@@ -294,7 +299,7 @@ img {
     font-size: 15px;
   }
 
-  .blog-post > .blog-content > h1 {
+  .blog-post h1 {
     font-size: 30px;
   }
   
@@ -315,7 +320,7 @@ img {
     margin-bottom: 1em;
   }
 
-  .grid-main > .blog-post > .comments {
+  .grid-main > .blog-post .comments {
     font-size: 21px;
     padding-top: 1em;
     padding-bottom: 1.5em;
@@ -362,11 +367,11 @@ img {
     padding-top: 2em;
   }
   
-  .blog-post > .blog-content > h1 {
+  .blog-post h1 {
     padding-bottom: 0.6em;
   }
 
-  .grid-main > .blog-post > .comments {
+  .grid-main > .blog-post .comments {
     padding-top: 2.5em;
   }
 }
@@ -436,7 +441,7 @@ img {
     font-size: 18px;
   }
 
-  .blog-post > .blog-content > h1 {
+  .blog-post h1 {
     font-size: 40px;
     line-height: 46px;
   }

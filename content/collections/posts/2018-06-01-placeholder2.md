@@ -5,7 +5,7 @@ slug: place-holder-slug-1
 date: 08 Nov 2017
 ---
 
-# PlaceHolder
+## Placeholder
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at elementum dui. Vestibulum sollicitudin consequat eros. Etiam lorem lorem, ultrices vel ultricies eu, malesuada sit amet est. Sed sapien ipsum, vehicula vel egestas nec, consequat vitae nisl. Proin quis dui non lorem luctus viverra vel ut urna. Vestibulum mollis lacus sit amet orci consequat, dapibus aliquam odio eleifend. Suspendisse feugiat iaculis felis, quis cursus nulla semper non. Integer non nisl lacus. Suspendisse eu sodales quam, non eleifend dui.
 

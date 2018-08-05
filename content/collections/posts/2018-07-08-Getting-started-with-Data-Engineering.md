@@ -5,8 +5,6 @@ slug: getting-started-with-data-engineering
 date: 31 Dec 2018
 ---
 
-# Getting Started With Data Engineering
-
 I recently moved to a team that specialises in data and analytics with little to no knowledge of the area. I spent a lot of time upskilling before I became productive whatsoever. This post is the overview I wish I had.
 
 * First I will provide a brief history of the big data sector and why it exists.

@@ -5,8 +5,6 @@ slug: uploading-streaming-audio-using-nodejs-express-mongodb-gridfs
 date: 08 Nov 2017
 ---
 
-# Uploading/Streaming Audio using NodeJS + Express + MongoDB/GridFS
-
 I am writing this post in reaction to the lack of information I found while trying to develop my final year computer science project. My project was a music streaming web application akin to spotify.
 > This posts code Repository: [https://github.com/richard534/nodeMongoAudioUploadStreamTest/tree/master](https://github.com/richard534/nodeMongoAudioUploadStreamTest/tree/master)
 
