@@ -79,7 +79,7 @@ img {
   padding-bottom: 1em;
 }
 
-.navbar > img {
+.navbar img {
   max-width: 6em;
 }
 
@@ -275,7 +275,7 @@ img {
     font-size: 17px;
   }
 
-  .navbar > img {
+  .navbar img {
     max-width: 8em;
   }
 
@@ -343,7 +343,7 @@ img {
     line-height: 1.5em;
   }
 
-  .navbar > img {
+  .navbar img {
     max-width: 8em;
   }
 
@@ -410,7 +410,7 @@ img {
     padding-bottom: 0;
   }
 
-  .navbar > img {
+  .navbar img {
     max-width: 12em;
   }
   
@@ -483,7 +483,7 @@ img {
     max-width: 700px;
   }
   
-  .navbar > img {
+  .navbar img {
     max-width: 15em;
   }
 }

@@ -195,7 +195,7 @@ Popular relational databases include:
 
 ## Roles & Responsibilities 👔
 
-The exact roles and responsibilites you will perform as a data engineer will vary greatly from company to company. Make sure you read the job spec and remember — every job has periods of uninteresting/monotonous work.
+The exact roles and responsibilities you will perform as a data engineer will vary greatly from company to company. Make sure you read the job spec and remember — every job has periods of uninteresting/monotonous work.
 
 As a Data Engineer you may be involved in projects such as the following:
 
@@ -225,9 +225,9 @@ I’m including a terminology guide in this post. It is something I believe woul
 
 * **Data Warehouse:** The term “Data warehouse” is thrown around a lot in this field. It is a very general term which simply means “a large store of data accumulated from a wide range of sources within a company”. The term does not imply the way said data is stored — be that relational or non-relational — nor does it imply any particular data storage technology was used such as Hadoop/Amazon Redshift/mySQL/etc. To be honest the term is used all over the place and you will find many who disagree with my definition.
 
-* **Data Mart:**A subset of the data warehouse that is usually oriented to a specific business line or team.
+* **Data Mart:** A subset of the data warehouse that is usually oriented to a specific business line or team.
 
-* **Data Lake:**As tempting as it is to disregard this term as marketing fluff it can serve as a useful analogy for a large store of unstructured data (the shallowness of a lake acting as the analogy for flat unstructured data). However, this analogy is problematic in that it implies that the term “data warehouse” must in turn refer to a structured store, which it does not necessarily.
+* **Data Lake:** As tempting as it is to disregard this term as marketing fluff it can serve as a useful analogy for a large store of unstructured data (the shallowness of a lake acting as the analogy for flat unstructured data). However, this analogy is problematic in that it implies that the term “data warehouse” must in turn refer to a structured store, which it does not necessarily.
 
 * **[OLAP](https://en.wikipedia.org/wiki/Online_analytical_processing)/[OLTP](https://en.wikipedia.org/wiki/Online_transaction_processing):** On-Line Analytical Processing / On-Line Transaction Processing. Terms used to characterise systems. Systems that are designed to perform large batch processing jobs that could take several minutes to several hours are termed OLAP systems. Systems that are designed with low latency in mind (milliseconds) are termed OLTP systems
 
@@ -243,7 +243,7 @@ As always feedback — both good and bad — is always appreciated!
 
 ## External Links/Inspired by/Further Reading 😲
 
-**The Rise of the Data Engineer**(The first article I read about Data Engineering): [https://goo.gl/rZn7hG](https://goo.gl/rZn7hG)
+**The Rise of the Data Engineer** (The first article I read about Data Engineering): [https://goo.gl/rZn7hG](https://goo.gl/rZn7hG)
 
 **Udemy course on Hadoop** that inspired most of this post (highly recomended): [https://goo.gl/L2deDt](https://goo.gl/L2deDt)
 

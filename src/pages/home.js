@@ -6,7 +6,7 @@ const Home = ({ posts }) => (
   <div className="grid-container">
     <div className="navbar-background">
       <div className="navbar">
-        <img src="https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/duck-billed-dev.png" />
+        <Link to="/"><img src="https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/duck-billed-dev.png" /></Link>
       </div>
     </div>
 
