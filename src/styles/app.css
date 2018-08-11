@@ -227,15 +227,18 @@ img {
   padding-bottom: 2em;
 }
 
-/* TODO add pagination stying */
-/* .pagination {
+.pagination {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 1em;
   font-weight: 100;
   font-size: 12px;
   padding-bottom: 1.5em;
-} */
+}
+
+.newer-posts {
+  justify-self: left;
+}
 
 .page-num {
   grid-column: 2/3;

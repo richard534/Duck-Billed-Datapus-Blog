@@ -52,10 +52,12 @@ export default {
           path: '/',
           component: 'src/pages/home'
         },
-        decorate: items => ({
+        decorate: (item, pageNum, totalNumPages) => ({
           getData: () => ({
-            posts: items
-          })
+            posts: item,
+            pageNum: pageNum,
+            totalNumPages: totalNumPages
+          }),
         })
       }),
       ...makeBlogPostRoutes({
@@ -94,19 +96,22 @@ function makePaginationRoutes({
     pages.push(itemsCopy.splice(0, pageSize))
   }
 
+  // Calculate total number of pages before mutating the pages array
+  const totalNumberPages = pages.length
+
   // Move the first page out of pagination. This is so page one doesn't require a page number.
   const firstPage = pages.shift()
 
   const routes = [
     {
       ...route,
-      ...decorate(firstPage) // and only pass the first page as data
+      ...decorate(firstPage, 1, totalNumberPages) // and only pass the first page as data
     },
     // map over each page to create an array of page routes, and spread it!
     ...pages.map((page, i) => ({
       ...route, // route defaults
       path: `${route.path}/${pageToken}/${i + 2}`,
-      ...decorate(page)
+      ...decorate(page, i + 2, totalNumberPages)
     }))
   ]
 

@@ -7,8 +7,14 @@ import App from './app'
 // Export top level component as JSX (for static rendering)
 export default App
 
+// Add css styles to app bundle
 import './styles/app.css'
 import './styles/highlight-js-github-style.min.css'
+
+// Add fontawesome icons to app bundle
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+library.add(faArrowRight, faArrowLeft)
 
 // Render app
 if (typeof document !== 'undefined') {
