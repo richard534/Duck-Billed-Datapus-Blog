@@ -22,8 +22,7 @@ const PostPage = ({ post }) => (
     </div>
 
     <div className="navigation-links">
-      <p>Index</p>
-      <p>About Me</p>
+      <Link to="/post/about-me"><p>About Me</p></Link>
     </div>
   </div>
 )

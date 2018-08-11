@@ -117,6 +117,7 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  min-height: 100vh;
   padding-right: 15px;
   padding-left: 15px;
   padding-top: 0.5em;
@@ -249,7 +250,7 @@ img {
   justify-self: right;
 }
 
-.grid-container > .navigation-links {
+.grid-container .navigation-links {
   grid-column: 1/13;
   background-color: #f0f2ef;
   text-align: center;
@@ -259,7 +260,7 @@ img {
   font-size: 14px;
 }
 
-.navigation-links > p {
+.navigation-links p {
   font-size: 14px;
   padding-top: 1.5em;
 }
@@ -348,7 +349,7 @@ img {
     background-color: #f0f2ef;
   }
   
-  .navigation-links > p {
+  .navigation-links p {
     line-height: 1.5em;
   }
 

@@ -28,8 +28,7 @@ const Home = ({ posts, pageNum, totalNumPages }) => (
     </div>
 
     <div className="navigation-links">
-      <p>Index</p>
-      <p>About Me</p>
+      <Link to="/post/about-me"><p>About Me</p></Link>
     </div>
   </div>
 )
