@@ -21,9 +21,9 @@ const Home = ({ posts, pageNum, totalNumPages }) => (
     <div className="grid-main">
       {posts.map(post => <Post key={post.slug} post={post} />)}
       <div className="pagination">
-        {pageNum != 1 ? <Link to={ pageNum == 2 ? "/" : "/page/" + (pageNum - 1)}><div className="newer-posts"><FontAwesomeIcon icon="arrow-left" /> Newer Posts</div></Link> : undefined}
+        {pageNum != 1 ? <Link className="newer-posts" to={ pageNum == 2 ? "/" : "/page/" + (pageNum - 1)}><div><FontAwesomeIcon icon="arrow-left" /> Newer Posts</div></Link> : undefined}
         <div className="page-num">Page {pageNum} of {totalNumPages}</div>
-        {pageNum != totalNumPages ? <Link to={"/page/" + (pageNum + 1)}><div className="older-posts">Older Posts <FontAwesomeIcon icon="arrow-right" /></div></Link> : undefined}
+        {pageNum != totalNumPages ? <Link className="older-posts" to={"/page/" + (pageNum + 1)}><div>Older Posts <FontAwesomeIcon icon="arrow-right" /></div></Link> : undefined}
       </div>
     </div>
 

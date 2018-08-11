@@ -227,7 +227,7 @@ img {
   padding-bottom: 2em;
 }
 
-.pagination {
+.grid-main > .pagination {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 1em;
@@ -236,16 +236,16 @@ img {
   padding-bottom: 1.5em;
 }
 
-.newer-posts {
+.grid-main > .pagination > .newer-posts {
   justify-self: left;
 }
 
-.page-num {
+.grid-main > .pagination > .page-num {
   grid-column: 2/3;
   justify-self: center;
 }
 
-.older-posts {
+.grid-main > .pagination > .older-posts {
   justify-self: right;
 }
 
@@ -332,11 +332,9 @@ img {
     padding-bottom: 1.5em;
   }
 
-  /* TODO add pagination styling  */
-  /* .pagination {
+  .grid-main > .pagination {
     font-size: 16px;
-    padding-bottom: 2em;
-  } */
+  }
 }
 
 /* Medium (Tablet) >=768px */
