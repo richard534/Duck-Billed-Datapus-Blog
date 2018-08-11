@@ -9,6 +9,6 @@ export default withRouteData(({ post }) => (
       className="blog-content"
       dangerouslySetInnerHTML={{ __html: post.contents }}
     />
-    <Link to={"/post/" + post.slug}><p className="comments">Comments (20)</p></Link>
+    <Link to={"/post/" + post.slug + "#comment"}><p id="comment" className="comments">Comments (20)</p></Link>
   </div>
 ));
