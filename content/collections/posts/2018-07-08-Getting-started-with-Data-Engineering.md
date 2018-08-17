@@ -239,14 +239,14 @@ As always feedback — both good and bad — is always appreciated!
 
 ---
 
-## External Links/Inspired by/Further Reading 😲
+### External Links/Inspired by/Further Reading 😲
 
-**The Rise of the Data Engineer** (The first article I read about Data Engineering): [https://goo.gl/rZn7hG](https://goo.gl/rZn7hG)
+* **The Rise of the Data Engineer** (The first article I read about Data Engineering): [https://goo.gl/rZn7hG](https://goo.gl/rZn7hG)
 
-**Udemy course on Hadoop** that inspired most of this post (highly recomended): [https://goo.gl/L2deDt](https://goo.gl/L2deDt)
+* **Udemy course on Hadoop** that inspired most of this post (highly recomended): [https://goo.gl/L2deDt](https://goo.gl/L2deDt)
 
-**A Beginner’s Guide to Data Engineering — Part I** (Somewhat similar guide to this one but written from the perspective of a data scientist, great read!): [https://goo.gl/S4qfC8](https://goo.gl/S4qfC8)
+* **A Beginner’s Guide to Data Engineering — Part I** (Somewhat similar guide to this one but written from the perspective of a data scientist, great read!): [https://goo.gl/S4qfC8](https://goo.gl/S4qfC8)
 
-**Functional Data Engineering — a modern paradigm for batch data processing** (A love letter to why functional programming paradigms are well suited to ETL systems) : [https://goo.gl/aRAd4J](https://goo.gl/aRAd4J)
+* **Functional Data Engineering — a modern paradigm for batch data processing** (A love letter to why functional programming paradigms are well suited to ETL systems) : [https://goo.gl/aRAd4J](https://goo.gl/aRAd4J)
 
 Follow me on Twitter: [https://twitter.com/Richard534](https://twitter.com/Richard534)

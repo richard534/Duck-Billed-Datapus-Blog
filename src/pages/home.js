@@ -1,7 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { withRouteData, Link } from "react-static";
-import Post from "../containers/post";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import Post from "../containers/post"
 
 const Home = ({ posts, pageNum, totalNumPages }) => (
   <div className="grid-container">
@@ -32,5 +34,11 @@ const Home = ({ posts, pageNum, totalNumPages }) => (
     </div>
   </div>
 )
+
+Home.propTypes = {
+  posts: PropTypes.array,
+  pageNum: PropTypes.number,
+  totalNumPages: PropTypes.number
+}
 
 export default withRouteData(Home);

@@ -132,6 +132,10 @@ img {
   overflow: hidden;
 }
 
+.blog-post > .blog-content a {
+  color: #2b6dad;
+}
+
 .blog-post > .date-stamp {
   font-weight: 100; /* Thin */
   font-size: 12px;
@@ -221,11 +225,8 @@ img {
   vertical-align: middle;
 }
 
-.grid-main > .blog-post .comments {
-  font-size: 14px;
-  color: #2b6dad;
-  padding-top: 1.5em;
-  padding-bottom: 2em;
+.grid-main > .comments {
+  padding-top: 2.5em;
 }
 
 .grid-main > .pagination {
@@ -270,6 +271,8 @@ img {
   .grid-main {
     max-width: 540px;
     grid-gap: 2.5em;
+    min-width: 90%;
+    max-width: 90%;
   }
 
   .grid-container > .navbar-background {
@@ -327,10 +330,8 @@ img {
     margin-bottom: 1em;
   }
 
-  .grid-main > .blog-post .comments {
-    font-size: 21px;
-    padding-top: 1em;
-    padding-bottom: 1.5em;
+  .grid-main > .comments {
+    padding-top: 2em;
   }
 
   .grid-main > .pagination {
@@ -376,7 +377,7 @@ img {
     padding-bottom: 0.6em;
   }
 
-  .grid-main > .blog-post .comments {
+  .grid-main > .comments {
     padding-top: 2.5em;
   }
 }
@@ -479,6 +480,10 @@ img {
   .blog-post > .blog-content .hljs {
     font-size: 18px;
     line-height: 1.2em;
+  }
+  
+  .grid-main > .comments {
+    padding-top: 2.5em;
   }
 }
 
