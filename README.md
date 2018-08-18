@@ -1,10 +1,3 @@
-# React-Static - Basic Example
+# Duck Billed Datapus Blog
 
-This example is the most basic version of react-static available. It includes:
-- Babel
-- CSS imports
-- Image imports
-- File imports
-- Automatic Routing
-
-To get started, run `react-static create` and use the `basic` template.
+This is the code repository for my personal programming blog - Duck Billed Datapus.
