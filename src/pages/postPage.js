@@ -19,6 +19,30 @@ class PostPage extends React.Component {
   }
   
   render() {
+    // Optionally render nextPost Link 
+    let nextPostLink;
+    let nextPost = this.props.nextPost
+    if(nextPost) {
+      nextPostLink = (
+        <Link to={"/post/" + nextPost.slug}>
+          <div className="post-nav-header">Next Post</div>
+          <div className="post-nav-body">{nextPost.title}</div>
+        </Link>
+      )
+    }
+    
+    // Optionally render previousPost Link
+    let previousPostLink;
+    let previousPost = this.props.previousPost
+    if(previousPost) {
+      previousPostLink = (
+        <Link to={"/post/" + previousPost.slug}>
+          <div className="post-nav-header">Previous Post</div>
+          <div className="post-nav-body">{previousPost.title}</div>
+        </Link>
+      )
+    }
+    
     return (
       <div className="grid-container">
         <div className="navbar-background">
@@ -36,6 +60,10 @@ class PostPage extends React.Component {
 
         <div className="grid-main">
           <Post key={this.props.post.slug} post={this.props.post} />
+          <div className="post-navigation">
+            {nextPostLink}
+            {previousPostLink}
+          </div>
           <div className="comments" id="disqus_thread" />
         </div>
 
@@ -48,7 +76,9 @@ class PostPage extends React.Component {
 }
 
 PostPage.propTypes = {
-  post: PropTypes.object
+  post: PropTypes.object,
+  nextPost: PropTypes.object,
+  previousPost: PropTypes.object
 }
 
 export default withRouteData(PostPage);

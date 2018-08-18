@@ -2,7 +2,7 @@
 title: Getting started with Data Engineering
 description: Big picture overview of the data engineering specialisation.
 slug: getting-started-with-data-engineering
-date: 31 Dec 2018
+date: 05 Mar 2018
 ---
 
 I recently moved to a team that specialises in data and analytics with little to no knowledge of the area. I spent a lot of time upskilling before I became productive whatsoever. This post is the overview I wish I had.

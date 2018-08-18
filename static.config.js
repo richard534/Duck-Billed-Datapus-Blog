@@ -52,24 +52,26 @@ export default {
           path: '/',
           component: 'src/pages/home'
         },
-        decorate: (item, pageNum, totalNumPages) => ({
+        decorate: (pagePostContentItems, pageNum, totalNumPages) => ({
           getData: () => ({
-            posts: item,
+            posts: pagePostContentItems,
             pageNum: pageNum,
             totalNumPages: totalNumPages
           }),
         })
       }),
       ...makeBlogPostRoutes({
-        items: posts,
+        posts: posts,
         pageToken: 'post',
         route: {
           path: '/',
           component: 'src/pages/postPage'
         },
-        decorate: item => ({
+        decorate: (postContent, nextPost, previousPost) => ({
           getData: () => ({
-            post: item
+            post: postContent,
+            nextPost: nextPost,
+            previousPost: previousPost
           }),
         })
       }),
@@ -107,7 +109,7 @@ function makePaginationRoutes({
       ...route,
       ...decorate(firstPage, 1, totalNumberPages) // and only pass the first page as data
     },
-    // map over each page to create an array of page routes, and spread it!
+    // map over each page to create an array of page routes
     ...pages.map((page, i) => ({
       ...route, // route defaults
       path: `${route.path}/${pageToken}/${i + 2}`,
@@ -119,20 +121,38 @@ function makePaginationRoutes({
 }
 
 function makeBlogPostRoutes({
-  items,
+  posts,
   pageToken,
   route,
   decorate
 }) {
   const routes = [
-    // map over each page to create an array of page routes, and spread it!
-    ...items.map((post, i) => ({
-      
+    // map over each markdown file and create a blog post route
+    ...posts.map((post, i, array) => ({
       ...route, // route defaults
       path: `${route.path}/${pageToken}/${post.slug}`,
-      ...decorate(post)
+      ...decorate(post, nextPageIfExists(array, i), previousPageIfExists(array, i))
     }))
   ]
 
   return routes
 }
+
+function nextPageIfExists(pageArray, index) {
+  let nextPageIndex = index + 1
+  if(pageArray[nextPageIndex] == undefined) {
+    return undefined
+  } else {
+    return pageArray[nextPageIndex]
+  }
+}
+
+function previousPageIfExists(pageArray, index) {
+  let previousPageIndex = index - 1
+  if(pageArray[previousPageIndex] == undefined) {
+    return undefined
+  } else {
+    return pageArray[previousPageIndex]
+  }
+}
+
