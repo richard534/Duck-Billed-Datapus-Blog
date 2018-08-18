@@ -1,23 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import { withRouteData, Link } from "react-static";
+import ReactDisqusComments from 'react-disqus-comments';
+
 import Post from "../containers/post";
 
 class PostPage extends React.Component {
-  componentDidMount () {
-    var disqus_config = function () {
-      this.page.url = window.location.href;
-      this.page.identifier = this.props.post.slug;
-      this.page.title = this.props.post.title;
-    };
-    
-    var script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://duckbilleddatapus.disqus.com/embed.js';
-    script.setAttribute('data-timestamp', +new Date())
-    document.getElementsByTagName('head')[0].appendChild(script);
-  }
-  
   render() {
     // Optionally render nextPost Link 
     let nextPostLink;
@@ -64,7 +52,11 @@ class PostPage extends React.Component {
             {nextPostLink}
             {previousPostLink}
           </div>
-          <div className="comments" id="disqus_thread" />
+          <ReactDisqusComments
+            shortname="duckbilleddatapus-1"
+            identifier={this.props.post.slug}
+            title={this.props.post.title}
+          />
         </div>
 
         <div className="navigation-links">
