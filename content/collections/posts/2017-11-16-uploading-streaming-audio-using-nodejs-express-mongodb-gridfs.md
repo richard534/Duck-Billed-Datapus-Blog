@@ -151,7 +151,7 @@ To test the web service I use [Postman](https://www.getpostman.com/). Start the 
 
 We can test the POST track endpoint using the following URL localhost:3005/tracks. Set the type of request to post and set the request body type to form-data. Finally add the name and track key-value pairs to the request, making sure to set the track value to type ‘file’ and selecting the track from your filesystem.
 
-![Manually testing POST track endpoint](https://cdn-images-1.medium.com/max/4860/1*jt24F16eOklWORLkoGOI1Q.png)*Manually testing POST track endpoint*
+![Manually testing POST track endpoint](https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/2017/11/manually-testing-post-track-endpoint-2.png)*Manually testing POST track endpoint*
 
 We should receive a 201 response from the service and a message confirming the upload. Take a copy of the ObjectID returned; we will use it to test the GET track endpoint.
 
@@ -159,7 +159,7 @@ We should receive a 201 response from the service and a message confirming the u
 
 We can test the GET track endpoint using the following URL `localhost:3005/tracks/5a04a2ec95a1ac09f6d2d59e` (the url parameter being the object ID we received from the previous POST request). Set the type of the request to GET and send away!
 
-![Manually testing POST track endpoint](https://cdn-images-1.medium.com/max/4880/1*w3N_-2mpvAboGAQ8tbrRgw.png)*Manually testing POST track endpoint*
+![Manually testing POST track endpoint](https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/2017/11/manually-testing-post-track-endpoint.png)*Manually testing POST track endpoint*
 
 Since we set the response ‘content type’ header to ‘audio/mp3’ postman will render a small player and begin playing the song.
 

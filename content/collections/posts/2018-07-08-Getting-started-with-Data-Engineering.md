@@ -36,7 +36,7 @@ These are two very different specialisations — with Data engineers usually com
 
 Ultimately the job of a data engineer is to ensure the architecture that is in place supports the requirements of the data scientists and stakeholders of the business.
 
-![Data Engineer vs Data Scientist:- Source — [www.datacamp.com](http://www.datacamp.com)](https://cdn-images-1.medium.com/max/2000/1*WEEyyerDibCg9Si2w-Yl8w.png)*Data Engineer vs Data Scientist:- Source — [www.datacamp.com](http://www.datacamp.com)*
+![Data Engineer vs Data Scientist:- Source — [www.datacamp.com](http://www.datacamp.com)](https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/2018/03/data-eng-sci-tools-comparison.png)*Data Engineer vs Data Scientist:- Source — [www.datacamp.com](http://www.datacamp.com)*
 
 Like most things in technology big data is a fairly new field, with Hadoop only being open sourced in 2011 (many would consider the release of Hadoop as the start of big data as we know it). As such, don’t expect anyone to agree on the exact definition/skills/job-title of a “data engineer” within the next 100 years or so.
 
@@ -58,7 +58,7 @@ Such “trends” include:
 
 The following image serves as an overview of the the Big Data field. It can seem… overwhelming:
 
-![The big data landscape](https://cdn-images-1.medium.com/max/2000/1*s59RqCor-mnLmqHdlYv_9A.png)*The big data landscape*
+![The big data landscape](https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/2018/03/big-data-landscape.png)*The big data landscape*
 
 If its any consolation, as a data engineer you are mainly concerned with the open source (in green) and — to a lesser degree — infrastructure (in orange) sections of the above image.
 
@@ -156,7 +156,7 @@ It can be a very difficult decision deciding what type of database to export you
 The [CAP Theorem](https://en.wikipedia.org/wiki/CAP_theorem) can help make this choice easier. As a quick primer; the CAP theorem states that a distributed system cannot simultaneously be consistent, available, and partition tolerant. You must select two.
 > **N.B.**The [Hadoop Distributed File System](http://hadoop.apache.org/hdfs/)(HDFS) chooses Partition Tolerance and consistency (CP)— three failed data nodes can render a file’s blocks unavailable if you are unlucky.
 
-![CAP Theorem](https://cdn-images-1.medium.com/max/2000/1*2WIMd5xn2SGg-52vTncThQ.png)*CAP Theorem*
+![CAP Theorem](https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/2018/03/cap-theorem.png)*CAP Theorem*
 
 The long and short of it is that traditional relational databases aren’t designed to scale out and noSQL databases sacrifice standard query languages and data integrity (most follow the [eventual consistency](https://en.wikipedia.org/wiki/Eventual_consistency) [consistency model](https://en.wikipedia.org/wiki/Consistency_model)) in order to work at scale.
 > **N.B.** The newest attempt to fix the availability/consistency trade-off that must be made for databases that wish to operate at global scale (be partition tolerant) is Googles “[Cloud Spanner](https://cloud.google.com/spanner/)” service. Spanner is a CP system that Google describe this as “effectively CA” [source](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/45855.pdf). Considering the Spanner project is being led by Eric Brewer — the guy behind CAP Theorem — it may be one to watch. It is however — for now — closed source and super pricey. [CockroachDB](https://github.com/cockroachdb/cockroach) is an open source alternative attempting to clone it in much the same vain as Cassandra and Hbase cloned Googles Bigtable database.
