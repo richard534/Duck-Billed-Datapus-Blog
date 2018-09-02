@@ -243,8 +243,10 @@ img {
   vertical-align: middle;
 }
 
-.grid-main > .comments {
+.grid-main .comments {
   padding-top: 1.5em;
+  padding-bottom: 2.75em;
+  color: #2b6dad;
 }
 
 .grid-main > .pagination {
@@ -346,16 +348,12 @@ img {
     margin-bottom: 1em;
   }
 
-  .grid-main > .comments {
+  .grid-main .comments {
     padding-top: 2em;
   }
 
   .grid-main > .pagination {
     font-size: 16px;
-  }
-  
-  .grid-main > .comments {
-    padding-top: 0em;
   }
 }
 
@@ -396,6 +394,10 @@ img {
   
   .blog-post h1 {
     padding-bottom: 0.6em;
+  }
+  
+  .grid-main .comments {
+    padding-bottom: 0em;
   }
 }
 
@@ -497,6 +499,11 @@ img {
   .blog-post > .blog-content .hljs {
     font-size: 18px;
     line-height: 1.2em;
+  }
+  
+  .grid-main .comments {
+    padding-top: 2.5em;
+    font-size: 21px;
   }
 }
 
