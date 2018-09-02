@@ -77,6 +77,13 @@ export default {
         })
       }),
       {
+        path: '/posts',
+        component: 'src/pages/indexPage',
+        getData: async () => ({
+         posts: posts.reverse()
+        })
+      },
+      {
         is404: true,
         component: 'src/pages/404',
       }
@@ -156,4 +163,3 @@ function previousPageIfExists(pageArray, index) {
     return pageArray[previousPageIndex]
   }
 }
-
