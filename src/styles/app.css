@@ -286,6 +286,37 @@ img {
   padding-top: 1.5em;
 }
 
+
+
+.grid-main .index-header-date:first-child {
+  padding-top: 0.25em;  
+}
+
+.grid-main .index-header-date:last-child {
+  padding-bottom: 1em;
+}
+
+.grid-main .index-header-date {
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.grid-main .index-body {
+  padding-top: 0.5em;
+  line-height: 1em;
+  padding-left: 0.5em;
+}
+
+.grid-main .index-body-date {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.grid-main .index-body-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
 /* Small (Phone-Landscape) >=576px */
 @media (min-width: 576px) {
   .grid-main {
@@ -399,6 +430,22 @@ img {
   .grid-main .comments {
     padding-bottom: 0em;
   }
+  
+  .grid-main .index-header-date:first-child {
+    padding-top: 1em;
+  }
+
+  .grid-main .index-header-date {
+    font-size: 28px;
+  }
+
+  .grid-main .index-body-date {
+    font-size: 18px;
+  }
+
+  .grid-main .index-body-title {
+    font-size: 20px;
+  }
 }
 
 /* Large (Desktop) >=992px */
@@ -442,6 +489,8 @@ img {
 
   .navbar img {
     max-width: 12em;
+    padding-left: 1em;
+    padding-right: 1em;
   }
   
   .grid-container > .navigation-links {
@@ -505,6 +554,10 @@ img {
     padding-top: 2.5em;
     font-size: 21px;
   }
+  
+  .grid-main .index-body {
+    padding-top: 0.9em;
+  }
 }
 
 /* X-Large (Widescreen Desktop) >=1200px */
@@ -516,5 +569,6 @@ img {
   
   .navbar img {
     max-width: 15em;
+    padding: 0em;
   }
 }

@@ -50,6 +50,7 @@ class PostPage extends React.Component {
         </div>
 
         <div className="navigation-links">
+          <Link to="/posts"><p>Index</p></Link>
           <Link to="/post/about-me"><p>About Me</p></Link>
         </div>
       </React.Fragment>
