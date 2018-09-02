@@ -3,16 +3,12 @@ import PropTypes from 'prop-types';
 import { withRouteData, Link } from "react-static";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import Post from "../containers/post"
+import Post from "../containers/post";
+import PostHeader from "../containers/postHeader";
 
 const Home = ({ posts, pageNum, totalNumPages }) => (
   <React.Fragment>
-    <div className="header-background">
-      <div className="header">
-        <header>Duck Billed Datapus</header>
-        <p>A programming blog of sorts</p>
-      </div>
-    </div>
+    <PostHeader/>
 
     <div className="grid-main">
       {

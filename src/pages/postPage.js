@@ -4,6 +4,7 @@ import { withRouteData, Link } from "react-static";
 import ReactDisqusComments from 'react-disqus-comments';
 
 import Post from "../containers/post";
+import PostHeader from "../containers/postHeader";
 
 class PostPage extends React.Component {
   render() {
@@ -33,12 +34,7 @@ class PostPage extends React.Component {
     
     return (
       <React.Fragment>
-        <div className="header-background">
-          <div className="header">
-            <header>Duck Billed Datapus</header>
-            <p>A programming blog of sorts</p>
-          </div>
-        </div>
+        <PostHeader/>
 
         <div className="grid-main">
           <Post key={this.props.post.slug} post={this.props.post} />
