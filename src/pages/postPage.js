@@ -32,13 +32,7 @@ class PostPage extends React.Component {
     }
     
     return (
-      <div className="grid-container">
-        <div className="navbar-background">
-          <div className="navbar">
-            <Link to="/"><img src="https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/duck-billed-dev.png" /></Link>
-          </div>
-        </div>
-
+      <React.Fragment>
         <div className="header-background">
           <div className="header">
             <header>Duck Billed Datapus</header>
@@ -62,7 +56,7 @@ class PostPage extends React.Component {
         <div className="navigation-links">
           <Link to="/post/about-me"><p>About Me</p></Link>
         </div>
-      </div>
+      </React.Fragment>
     )
   }
 }

@@ -6,13 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Post from "../containers/post"
 
 const Home = ({ posts, pageNum, totalNumPages }) => (
-  <div className="grid-container">
-    <div className="navbar-background">
-      <div className="navbar">
-        <Link to="/"><img src="https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/duck-billed-dev.png" /></Link>
-      </div>
-    </div>
-
+  <React.Fragment>
     <div className="header-background">
       <div className="header">
         <header>Duck Billed Datapus</header>
@@ -46,7 +40,7 @@ const Home = ({ posts, pageNum, totalNumPages }) => (
     <div className="navigation-links">
       <Link to="/post/about-me"><p>About Me</p></Link>
     </div>
-  </div>
+  </React.Fragment>
 )
 
 Home.propTypes = {
