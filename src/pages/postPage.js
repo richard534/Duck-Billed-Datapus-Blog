@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { withRouteData, Link } from "react-static";
 import ReactDisqusComments from 'react-disqus-comments';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import Post from "../containers/post";
 import PostHeader from "../containers/postHeader";
@@ -52,6 +53,7 @@ class PostPage extends React.Component {
         <div className="navigation-links">
           <Link to="/posts"><p>Index</p></Link>
           <Link to="/post/about-me"><p>About Me</p></Link>
+          <a href="https://duckbilleddatapus.com/rss/index.xml" type="application/rss+xml" className="navigation-links-icon"><p><FontAwesomeIcon icon="rss-square" width="20" height="20"/></p></a>
         </div>
       </React.Fragment>
     )

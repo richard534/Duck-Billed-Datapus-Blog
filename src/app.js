@@ -11,7 +11,7 @@ const App = () => (
           <Link to="/"><img src="https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/duck-billed-dev.png" /></Link>
         </div>
       </div>
-    <Routes />
+      <Routes />
     </div>
   </Router>
 )

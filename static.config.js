@@ -4,8 +4,11 @@ import chokidar from 'chokidar'
 import jdown from 'jdown'
 import { Renderer } from 'marked';
 import highlightjs from 'highlight.js';
+import { Feed } from "feed";
+import fs from 'fs';
+let rimraf = require('rimraf');
 
-chokidar.watch('content').on('all', () => reloadRoutes())
+chokidar.watch('content').on('all', () => reloadRoutes());
 
 // Custom marked renderers.
 const renderer = new Renderer();
@@ -34,6 +37,51 @@ export default {
       </Body>
     </Html>
   ),
+  onBuild: async () => {
+    const { posts } = await jdown('content', { renderer })
+  
+    const feed = new Feed ({
+      title: "Duck Billed Datapus",
+      description: "A programming blog of sorts",
+      id: "https://duckbilleddatapus.com",
+      link: "https://duckbilleddatapus.com",
+      image: "https://s3-eu-west-1.amazonaws.com/duck-billed-datapus/public/duck-billed-dev.png",
+      author: {
+        name: "Richard Taylor",
+        email: "richard53496@gmail.com",
+        link: "https://duckbilleddatapus.com"
+      }
+    });
+  
+  
+    posts.forEach(post => {
+      feed.addItem({
+        title: post.title,
+        id: post.url,
+        link: post.url,
+        description: post.description,
+        content: post.content,
+        author: [
+          {
+            name: "Richard Taylor",
+            email: "richard53496@gmail.com",
+            link: "https://duckbilleddatapus.com"
+          }
+        ],
+        date: new Date(post.date),
+        image: post.image
+      });
+    });
+      
+    let rss2Feed = feed.rss2();
+  
+    if(fs.existsSync('dist/rss')) {
+      rimraf.sync('dist/rss')
+    }
+    fs.mkdirSync('dist/rss/');
+  
+    fs.writeFileSync('dist/rss/index.xml', rss2Feed);
+  },
   siteRoot: 'https://duckbilleddatapus.com',
   devServer: {
     host: '0.0.0.0',
@@ -43,7 +91,7 @@ export default {
     siteTitle: 'Duck Billed Datapus',
   }),
   getRoutes: async () => {
-    const { posts } = await jdown('content', { renderer })
+    let { posts } = await jdown('content', { renderer })
     return [
       ...makePaginationRoutes({
         items: posts,
@@ -82,6 +130,9 @@ export default {
         getData: async () => ({
          posts: posts.reverse()
         })
+      },
+      {
+        path: '/rss/index.xml'
       },
       {
         is404: true,
@@ -163,3 +214,4 @@ function previousPageIfExists(pageArray, index) {
     return pageArray[previousPageIndex]
   }
 }
+

@@ -286,6 +286,10 @@ img {
   padding-top: 1.5em;
 }
 
+.navigation-links .navigation-links-icon p {
+  font-size: 30px;
+  padding-top: 0.75em;
+}
 
 
 .grid-main .index-header-date:first-child {
@@ -491,6 +495,11 @@ img {
     max-width: 12em;
     padding-left: 1em;
     padding-right: 1em;
+  }
+  
+  .navigation-links .navigation-links-icon p {
+    font-size: 30px;
+    padding-top: 0.75em;
   }
   
   .grid-container > .navigation-links {

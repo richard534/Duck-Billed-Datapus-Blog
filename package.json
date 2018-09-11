@@ -14,6 +14,7 @@
     "@fortawesome/free-solid-svg-icons": "prerelease",
     "@fortawesome/react-fontawesome": "prerelease",
     "chokidar": "^2.0.4",
+    "feed": "^2.0.1",
     "highlight.js": "^9.12.0",
     "jdown": "^0.6.4",
     "marked": "^0.4.0",
@@ -23,7 +24,8 @@
     "react-dom": "^16.0.0",
     "react-hot-loader": "^4.0.0-beta.21",
     "react-router": "^4.2.0",
-    "react-static": "^5.9.7"
+    "react-static": "^5.9.7",
+    "rimraf": "^2.6.2"
   },
   "devDependencies": {
     "eslint-config-react-tools": "1.x.x",

@@ -13,8 +13,8 @@ import './styles/highlight-js-github-style.min.css'
 
 // Add fontawesome icons to app bundle
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
-library.add(faArrowRight, faArrowLeft)
+import { faArrowRight, faArrowLeft, faRssSquare } from '@fortawesome/free-solid-svg-icons'
+library.add(faArrowRight, faArrowLeft, faRssSquare)
 
 // Render app
 if (typeof document !== 'undefined') {
