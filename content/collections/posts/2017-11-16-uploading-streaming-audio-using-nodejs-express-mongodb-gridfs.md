@@ -98,15 +98,21 @@ The readable stream returned from the openDownloadStream method emits a number N
 
 For our purposes we are only interested in the data, error and end events. We write a [listener function](https://nodejs.org/api/events.html#events_emitter_on_eventname_listener) for each of these possible events.
 
-    downloadStream.on('data', (chunk) => { res.write(chunk); });
+```javascript
+downloadStream.on('data', (chunk) => { res.write(chunk); });
+```
 
 We must add a data event listener in order to start the stream flowing. The data event is emitted each time a chunk is available (a chunk being a part of the file). The listener callback will be passed a chunk each time the event is called. Inside the listener callback we can then use the res.write function to send the chunk to the client. This is performed until the readable stream runs out of data; at which point the end event is called. As a sidenote the res.write function is actually not a part of express, we are directly calling the [Node HTTP API](https://nodejs.org/api/http.html#http_response_write_chunk_encoding_callback).
 
-    downloadStream.on('end', () => { res.end(); });
+```javascript
+downloadStream.on('end', () => { res.end(); });
+```
 
 Once we readable stream emits the end event we simply use the express res.end method to end the response process.
 
-    downloadStream.on('error', () => { res.sendStatus(404); });
+```javascript
+downloadStream.on('error', () => { res.sendStatus(404); });
+```
 
 For completeness I also wrote a listener function for the error event. For the sake of simplicity in the event of an error I just send a 404 to the client. In the real world you will want to parse the error and return a more accurate error message.
 
