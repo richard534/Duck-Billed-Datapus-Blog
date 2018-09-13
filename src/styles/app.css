@@ -116,7 +116,6 @@ img {
   grid-column: 1 / 13;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto;
   min-height: 100vh;
   padding-right: 15px;
   padding-left: 15px;
@@ -142,6 +141,10 @@ img {
 .grid-main > .post-navigation > a > .post-nav-body {
   font-weight: 700;
   line-height: 1.37em;
+}
+
+.index {
+  grid-auto-rows: fit-content(40%);
 }
 
 .blog-post {

@@ -24,7 +24,7 @@ class IndexPage extends React.Component {
     return (
       <React.Fragment>
         <PostHeader />
-        <div className="grid-main">
+        <div className="grid-main index">
           {
             yearToPostsArray.map(postYearGroup => {
               return (
