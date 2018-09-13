@@ -57,8 +57,8 @@ export default {
     posts.forEach(post => {
       feed.addItem({
         title: post.title,
-        id: post.url,
-        link: post.url,
+        id: `http://duckbilleddatapus.com/post/${post.slug}`,
+        link: `http://duckbilleddatapus.com/post/${post.slug}` ,
         description: post.description,
         content: post.content,
         author: [
