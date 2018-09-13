@@ -14,14 +14,14 @@ const Home = ({ posts, pageNum, totalNumPages }) => (
       {
         posts.map(post => {
           return (
-            <div key={post.slug}>
+            <React.Fragment key={post.slug}>
               <Post post={post} />
               <Link to={"/post/" + post.slug + "#comments"}>
                 <p id="comments" className="comments">
                   Comments
                 </p>
               </Link>
-            </div>
+            </React.Fragment>
           );
         })
       }
